@@ -100,7 +100,7 @@ This project is open-source and available under the **MIT License**.
 ## 🙌 Credits
 - Developed by **Thiruselvan - [ThiruXD](https://github.com/ThiruXD)**
 - Based on the work of **[Arduino Community](https://forum.arduino.cc/)**
-- GitHub Repository: [Arduno Based Project](https://github.com/ThiruXD/Arduno-Based-Project)
+- GitHub Repository: **[Arduno Based Project](https://github.com/ThiruXD/Arduno-Based-Project)**
 - Part of the **Final Year Project** at [P.S.V Polytechnic College](https://g.co/kgs/e5nvPrM)
 
 🚀 **Happy IoT Development!** 🎉
