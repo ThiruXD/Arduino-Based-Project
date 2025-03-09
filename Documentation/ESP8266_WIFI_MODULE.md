@@ -98,7 +98,7 @@ This project is open-source and available under the **MIT License**.
 ---
 
 ## 🙌 Credits
-- Developed by **Thiruselvan - ThiruXD**
+- Developed by **Thiruselvan - [ThiruXD](https://github.com/ThiruXD)**
 - Based on the work of **Arduino Community**
 - GitHub Repository: [Arduno Based Project](https://github.com/ThiruXD/Arduno-Based-Project)
 
