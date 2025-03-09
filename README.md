@@ -12,7 +12,7 @@ Each component has a separate documentation file:
 - **[16x2 LCD with I2C Module](LCD_DISPLAY_MODULE.md)**
 - **[ESP8266 WiFi Module](ESP8266_WIFI_MODULE.md)**
 - **[Relay Module](2CHL_RELAY_MODULE.md)**
-- **[Power Supply & Circuit Connections](Power_Supply_Readme.md) (Coming Soon)**
+- **[Power Supply & Circuit Connections](POWER_SUPPLY_CIRCUIT_CONNECTIONS.md)**
 
 ## 🚀 Getting Started
 To set up this project, follow the individual component documentation linked above. Each guide includes wiring details, library installation steps, and example code.
