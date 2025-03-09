@@ -98,8 +98,8 @@ This project is open-source and available under the **MIT License**.
 ---
 
 ## 🙌 Credits
-- Developed by **Your Name**
-- Based on the work of **Arduino & ESP8266 Community**
-- GitHub Repository: [Your Repo Link](#)
+- Developed by **Thiruselvan - ThiruXD**
+- Based on the work of **Arduino Community**
+- GitHub Repository: [Arduno Based Project](https://github.com/ThiruXD/Arduno-Based-Project)
 
 🚀 **Happy IoT Development!** 🎉
