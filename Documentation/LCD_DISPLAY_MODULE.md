@@ -119,8 +119,8 @@ This project is open-source and available under the **MIT License**.
 ---
 
 ## 🙌 Credits
-- Developed by **Your Name**
+- Developed by **Thiruselvan - ThiruXD**
 - Based on the work of **Arduino Community**
-- GitHub Repository: [Your Repo Link](#)
+- GitHub Repository: [Arduno Based Project](https://github.com/ThiruXD/Arduno-Based-Project)
 
 🚀 **Happy Coding!** 🎉
