@@ -1,73 +1,66 @@
-# Arduino Uno
+# Arduino Uno - Smart Remote for Controlling Electrical Appliances
 
-This document provides details on using the **Arduino Uno** in the **Smart Remote for Controlling Electrical Appliances** project.
+## 📖 Overview
+The **Arduino Uno** is the central microcontroller for our **Smart Remote for Controlling Electrical Appliances** project. It communicates with the **ESP8266 WiFi Module** to receive commands and controls the **LCD Display and Relay Module** to operate appliances.
 
-## 📌 Overview
-The **Arduino Uno** serves as the main microcontroller, handling input signals, processing data, and controlling output devices such as the **ESP8266 WiFi module, LCD display, and relay module**.
+## 🔧 Features
+- Acts as the **main controller** for the project.
+- Communicates with **ESP8266 via SoftwareSerial**.
+- Controls **2-Channel Relay Module** to switch appliances ON/OFF.
+- Displays messages received from the web interface on **16x2 LCD**.
 
-## 🛠 Requirements
-### 🔹 Hardware:
-- **Arduino Uno**
-- **ESP8266 WiFi Module**
-- **16x2 LCD with I2C Module**
-- **Relay Module**
-- **Jumper Wires**
-- **Power Supply (5V & 3.3V as required)**
+## 📜 Pin Connections
 
-### 🔹 Software:
-- **Arduino IDE** ([Download](https://www.arduino.cc/en/software))
-- Required Libraries:
-  - `ESP8266WiFi.h`
-  - `LiquidCrystal_I2C.h`
-  - `Wire.h`
+| **Arduino Uno** | **Connected To** |
+|---------------|----------------|
+| **TX (Pin 1)** | ESP8266 RX *(through voltage divider)* |
+| **RX (Pin 0)** | ESP8266 TX |
+| **Pin 7** | Relay Module IN1 |
+| **A4 (SDA)** | LCD I2C SDA |
+| **A5 (SCL)** | LCD I2C SCL |
+| **5V** | LCD Display & Relay Module |
+| **3.3V** | ESP8266 |
+| **GND** | Common Ground |
 
----
+## 🔌 How It Works
+1. **Receives commands** from ESP8266 (e.g., turn ON/OFF appliances).
+2. **Sends signals** to the **relay module** to switch appliances.
+3. **Displays text** received via the web interface on the LCD.
 
-## ⚡ Wiring Connections
-The **Arduino Uno** interfaces with multiple components as follows:
-
-| **Component**   | **Arduino Uno Pins** |
-|---------------|-------------------|
-| **ESP8266 TX**  | **D0 (RX)**        |
-| **ESP8266 RX**  | **D1 (TX)**        |
-| **LCD SDA**     | **A4 (SDA)**       |
-| **LCD SCL**     | **A5 (SCL)**       |
-| **Relay IN**    | **D7**             |
-
-📌 **Note:** If using **ESP8266**, ensure **voltage level shifting** for safe communication (ESP8266 works on 3.3V logic, while Arduino Uno operates on 5V).
-
----
-
-## 🚀 Example Code
-This sample sketch initializes the **Arduino Uno**, connects to WiFi, and displays a message on the LCD.
-
+## 🚀 Code Example (Arduino Uno)
 ```cpp
 #include <Wire.h>
 #include <LiquidCrystal_I2C.h>
-#include <ESP8266WiFi.h>
+#define RELAY_PIN 7
 
 LiquidCrystal_I2C lcd(0x27, 16, 2);
-const char* ssid = "Your_SSID";
-const char* password = "Your_PASSWORD";
 
 void setup() {
-  Serial.begin(115200);
-  lcd.init();
-  lcd.backlight();
-  
-  WiFi.begin(ssid, password);
-  while (WiFi.status() != WL_CONNECTED) {
-    delay(1000);
-    Serial.println("Connecting...");
-  }
-  lcd.setCursor(0, 0);
-  lcd.print("WiFi Connected!");
+    Serial.begin(115200);
+    lcd.init();
+    lcd.backlight();
+    pinMode(RELAY_PIN, OUTPUT);
+    digitalWrite(RELAY_PIN, LOW);
 }
 
-void loop() {}
+void loop() {
+    if (Serial.available()) {
+        String command = Serial.readStringUntil('\n');
+        if (command == "LIGHT_ON") {
+            digitalWrite(RELAY_PIN, HIGH);
+        } else if (command == "LIGHT_OFF") {
+            digitalWrite(RELAY_PIN, LOW);
+        } else {
+            lcd.clear();
+            lcd.setCursor(0, 0);
+            lcd.print("Message:");
+            lcd.setCursor(0, 1);
+            lcd.print(command);
+        }
+    }
+}
 ```
 
----
 
 ## 📜 License
 This project is open-source and available under the **MIT License**.
