@@ -8,7 +8,7 @@ This project is designed to control home appliances remotely using an **ESP8266 
 ## 📂 Component Documentation
 Each component has a separate documentation file:
 
-- **[Arduno UNO](Documentation/ARDUINO_UNO.md)**
+- **[Arduino UNO](Documentation/ARDUINO_UNO.md)**
 - **[16x2 LCD with I2C Module](Documentation/LCD_DISPLAY_MODULE.md)**
 - **[ESP8266 WiFi Module](Documentation/ESP8266_WIFI_MODULE.md)**
 - **[Relay Module](Documentation/2CHL_RELAY_MODULE.md)**
@@ -31,7 +31,9 @@ This project is open-source and available under the **MIT License**.
 ## 🙌 Credits
 - Developed by **Thiruselvan - [ThiruXD](https://github.com/ThiruXD)**
 - Based on the work of **[Arduino Community](https://forum.arduino.cc/)**
-- GitHub Repository: **[Arduno Based Project](https://github.com/ThiruXD/Arduno-Based-Project)**
+- For circuit diagram ** - [Cirkit Designer](cirkitdesigner.com)**
+- For image hosting ** - [ImgBB](https://imgbb.com/)**
+- GitHub Repository: **[Arduino Based Project](https://github.com/ThiruXD/Arduino-Based-Project)**
 - Part of the **Final Year Project** at [P.S.V Polytechnic College](https://g.co/kgs/e5nvPrM)
 
 🚀 **Stay tuned for more updates!** 🎉
