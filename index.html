@@ -123,19 +123,19 @@
                         <div class="flex items-center justify-between">
                             <span class="font-medium">Fan</span>
                             <div class="relative inline-block w-12 mr-2 align-middle select-none">
-                                <input type="checkbox" onchange=\"fetch('/toggle?device=fan')\" name="power" id="power" class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 appearance-none cursor-pointer"/>
+                                <input type="checkbox" onchange="fetch('/toggle?device=fan')" name="power" id="power" class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 appearance-none cursor-pointer"/>
                                 <label for="power" class="toggle-label block overflow-hidden h-6 rounded-full bg-gray-300 cursor-pointer"></label>
                             </div>
                         </div>
                         <div class="flex items-center justify-between">
                             <span class="font-medium">Light</span>
                             <div class="relative inline-block w-12 mr-2 align-middle select-none">
-                                <input type="checkbox" onchange=\"fetch('/toggle?device=light')\" name="auto" id="auto" class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 appearance-none cursor-pointer"/>
+                                <input type="checkbox" onchange="fetch('/toggle?device=light')" name="auto" id="auto" class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 appearance-none cursor-pointer"/>
                                 <label for="auto" class="toggle-label block overflow-hidden h-6 rounded-full bg-gray-300 cursor-pointer"></label>
                             </div>
                         </div>
                     </div>
-                    <button onclick=\"fetch('/display?text='+document.getElementById('lcdText').value)\" class="w-full bg-blue-500 hover:bg-blue-600 text-white font-medium py-3 px-6 rounded-lg transition shadow-md">Display It...</button>
+                    <button onclick="fetch('/display?text='+document.getElementById('lcdText').value)" class="w-full bg-blue-500 hover:bg-blue-600 text-white font-medium py-3 px-6 rounded-lg transition shadow-md">Display It...</button>
                 </div>
             </div>
         </div>
@@ -216,6 +216,7 @@
         </div>
     </section>
 
+<!-- Circuit Block Diagram -->
 <section class="min-h-screen bg-white-90 text-black flex flex-col items-center justify-center px-4 pt-4">
   <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 relative pb-4">
                 Circuit Diagram
@@ -226,8 +227,6 @@
   </div>
 </section>
 
-
-<!-- Team Section -->
 <!-- Team Section -->
 <section id="team" class="py-20 bg-white">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
